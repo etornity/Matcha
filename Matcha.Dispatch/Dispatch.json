@@ -1,0 +1,21 @@
+{
+    "Network": {
+        "Host": "0.0.0.0",
+        "Port": 21000
+    },
+    "Database": {
+        "ConnectionString": "mongodb://127.0.0.1:27017/",
+        "Name": "Matcha",
+        "Entries": [
+            {
+                "CollectionName": "accounts",
+                "Type": "Account"
+            }
+        ]
+    },
+    "Region": {
+        "Name": "Matcha",
+        "EnvType": "2",
+        "DispatchUrl": "http://dispatch.starrails.com/query_gateway"
+    }
+}
