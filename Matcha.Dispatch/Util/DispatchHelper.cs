@@ -10,7 +10,7 @@
             {
                 {"uid", 1008},
                 {"name", "etornity"},
-                {"email", "etornity@matcha.git},
+                {"email", "etornity@matcha.git"},
                 {"mobile", ""},
                 {"is_email_verify", "0"},
                 {"realname", ""},
