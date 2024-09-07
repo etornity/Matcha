@@ -31,7 +31,7 @@
                         {
                             Ffadhpadgdc = 1222,
                             Dilejkdjnfg = Chegccaonce.AvatarFormalType,
-                            Mgmaepjlghb = 1337,
+                            Mgmaepjlghb = 1008,
                             Pmmfnkeaplg = 2,
                         },
                         Motion = new Ohmhbkookfc()
@@ -62,7 +62,7 @@
                     {
                         GroupId = 19,
                         InstId = 300001,
-                        EntityId = 1337,
+                        EntityId = 1008,
                         Prop = new Iomneabpnin()
                         {
                             Eibbgniflem = 808,

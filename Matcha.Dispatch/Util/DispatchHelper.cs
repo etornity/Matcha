@@ -8,9 +8,9 @@
         {
             return new JObject
             {
-                {"uid", 1337},
-                {"name", "reversedrooms"},
-                {"email", "reversedrooms@mihomo.com"},
+                {"uid", 1008},
+                {"name", "etornity"},
+                {"email", "etornity@matcha.git},
                 {"mobile", ""},
                 {"is_email_verify", "0"},
                 {"realname", ""},
@@ -23,7 +23,7 @@
                 {"apple_name", ""},
                 {"sony_name", ""},
                 {"tap_name", ""},
-                {"country", "CN"},
+                {"country", "US"},
                 {"reactivate_ticket", ""},
                 {"area_code", "**"},
                 {"device_grant_ticket", ""},

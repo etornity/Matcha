@@ -8,7 +8,7 @@
 
     internal static class Dispatch
     {
-        private const string Title = "Matcha.Dispatch";
+        private const string Title = "[2.5.0] Matcha.Dispatch";
 
         private static readonly Logger s_log = LogManager.GetCurrentClassLogger();
 
@@ -19,7 +19,7 @@
 
             Console.Title = Title;
             Console.WriteLine("\nMatcha is a revival of https://git.xeondev.com/Moux23333/FreeSR/");
-            Console.WriteLine("Be sure to join https://discord.gg/reversedrooms!\n");
+            Console.WriteLine("Be sure to join https://discord.gg/reversedrooms/\n");
 
             s_log.Info("Initializing...");
 

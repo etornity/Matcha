@@ -61,7 +61,7 @@
                 Mciakkehiaa = (ulong)DateTimeOffset.Now.ToUnixTimeSeconds() * 1000,
                 Ljomfcomdnp = new Odpllpebkjc
                 {
-                    Nilnmfaokkg = "xeondev",
+                    Nilnmfaokkg = "Eto",
                     Fopfhgjhebm = 70,
                     Ealdladenig = 100,
                     Nfbchlgdjfm = 6
@@ -75,7 +75,7 @@
             session.Send(CmdType.CmdPlayerGetTokenScRsp, new Hlhcjbljkng
             {
                 Nfhbjlibabk = 0,
-                Mgmaepjlghb = 1337,
+                Mgmaepjlghb = 1008,
                 Fpglgbgjmjc = "OK",
                 Knmmjicjamg = 0
             });
