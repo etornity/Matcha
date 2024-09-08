@@ -40,16 +40,17 @@
             session.Send(CmdType.CmdGetAvatarDataScRsp, response);
         }
 
+        // rogue = hunt, shaman = harmony, knight = preservation
+        public static Dictionary<uint, Mjiecoljkip> pathMap = new Dictionary<uint, Mjiecoljkip>
+        {
+            { 1001, Mjiecoljkip.Mar7thRogueType },
+            { 8001, Mjiecoljkip.BoyShamanType },
+            { 8002, Mjiecoljkip.GirlShamanType }
+        };
+
         [Handler(CmdType.CmdGetMultiPathAvatarInfoCsReq)]
         public static void OnGetMultiPathAvatarInfoCsReq(NetSession session, int cmdId, object data)
         {
-            var pathMap = new Dictionary<uint, Mjiecoljkip>
-            {
-                { 1001, Mjiecoljkip.Mar7thRogueType },
-                { 8001, Mjiecoljkip.BoyShamanType },
-                { 8002, Mjiecoljkip.GirlShamanType }
-            };
-
             var response = new Lgolgjbcmpl
             {
                 Nfhbjlibabk = 0,

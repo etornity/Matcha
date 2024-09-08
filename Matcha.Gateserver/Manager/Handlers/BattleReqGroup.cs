@@ -1,5 +1,6 @@
 ﻿using Matcha.Gateserver.Manager.Handlers.Core;
 using static Matcha.Gateserver.Manager.Handlers.LineupReqGroup;
+using static Matcha.Gateserver.Manager.Handlers.AvatarReqGroup;
 using Matcha.Gateserver.Network;
 using Matcha.Proto;
 
@@ -44,6 +45,54 @@ namespace Matcha.Gateserver.Manager.Handlers
             for (int i = 0; i < teamMembers.Count; i++)
             {
                 uint avatarId = teamMembers[i];
+
+                // automatically assign multi path id for battle
+                if (avatarId == 1001 || avatarId == 8001 || avatarId == 8002)
+                {
+                    if (AvatarReqGroup.pathMap.TryGetValue(avatarId, out var avatarType))
+                    {
+                        switch (avatarType)
+                        {
+                            case Mjiecoljkip.Mar7thRogueType:
+                                avatarId = (uint)Mjiecoljkip.Mar7thRogueType;
+                                break;
+
+                            case Mjiecoljkip.BoyShamanType:
+                                avatarId = (uint)Mjiecoljkip.BoyShamanType;
+                                break;
+
+                            case Mjiecoljkip.GirlShamanType:
+                                avatarId = (uint)Mjiecoljkip.GirlShamanType;
+                                break;
+
+                            case Mjiecoljkip.Mar7thKnightType:
+                                avatarId = (uint)Mjiecoljkip.Mar7thKnightType;
+                                break;
+
+                            case Mjiecoljkip.BoyWarriorType:
+                                avatarId = (uint)Mjiecoljkip.BoyWarriorType;
+                                break;
+
+                            case Mjiecoljkip.GirlWarriorType:
+                                avatarId = (uint)Mjiecoljkip.GirlWarriorType;
+                                break;
+
+                            case Mjiecoljkip.BoyKnightType:
+                                avatarId = (uint)Mjiecoljkip.BoyKnightType;
+                                break;
+
+                            case Mjiecoljkip.GirlKnightType:
+                                avatarId = (uint)Mjiecoljkip.GirlKnightType;
+                                break;
+
+                            default:
+                                // return original id when 0 match
+                                avatarId = teamMembers[i];
+                                break;
+                        }
+                    }
+                }
+
                 var avatarData = new Cnlnlmnaheh
                 {
                     Pfikmpgfecj = avatarId, // ID

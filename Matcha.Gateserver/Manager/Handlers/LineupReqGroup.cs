@@ -6,9 +6,9 @@
 
     internal static class LineupReqGroup
     {
-        public static uint Avatar1 = 1222; // Free
-        public static uint Avatar2 = 1220; // Feixiao
-        public static uint Avatar3 = 1223; // Moze
+        public static uint Avatar1 = 1222; // Lingsha
+        public static uint Avatar2 = 8001; // Caelus
+        public static uint Avatar3 = 1001; // March
         public static uint Avatar4 = 1304; // Aventurine
         [Handler(CmdType.CmdGetCurLineupDataCsReq)]
         public static void OnGetCurLineupDataCsReq(NetSession session, int cmdId, object _)
