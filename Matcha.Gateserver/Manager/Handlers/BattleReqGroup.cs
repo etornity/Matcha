@@ -93,6 +93,8 @@ namespace Matcha.Gateserver.Manager.Handlers
                     }
                 }
 
+                Giclniikjng spValues = LineupReqGroup.AvatarSpList[i]; // get energy from lineup
+
                 var avatarData = new Cnlnlmnaheh
                 {
                     Pfikmpgfecj = avatarId, // ID
@@ -102,7 +104,7 @@ namespace Matcha.Gateserver.Manager.Handlers
                     Pnomimanndn = 10000, // Hp
                     Dilejkdjnfg = Chegccaonce.AvatarFormalType, // AvatarType
                     Nfbchlgdjfm = 6, // World Level
-                    Ldjnpfpfjfd = new Giclniikjng { Dheffcdjldb = 10000, Nmnbhaopedn = 10000 }, // Sp
+                    Ldjnpfpfjfd = spValues, // Sp
                 };
 
                 avatarData.Gacbpcphhons.AddRange(RelicReqGroup.CreateTestEquipment(avatarId));
@@ -199,7 +201,14 @@ namespace Matcha.Gateserver.Manager.Handlers
 
         private static List<uint> GetTeamMembers()
         {
-            List<uint> teamMembers = new List<uint>{ Avatar1, Avatar2, Avatar3, Avatar4 };
+            List<uint> teamMembers = new List<uint>
+            { 
+                LineupReqGroup.Avatar1, 
+                LineupReqGroup.Avatar2, 
+                LineupReqGroup.Avatar3, 
+                LineupReqGroup.Avatar4,
+            };
+
             teamMembers = teamMembers.Where(avatarId => avatarId != 0).ToList();
             return teamMembers;
         }
