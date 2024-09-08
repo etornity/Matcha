@@ -82,17 +82,18 @@ namespace Matcha.Gateserver.Manager.Handlers
                 if (i == 2 && a3_tech) applyTechBuff = true;
                 if (i == 3 && a4_tech) applyTechBuff = true;
 
+                // note: techniques alone won't give toughness dmg, will need smth like EnterBattle buffs
                 if (applyTechBuff)
                 {
+                    var techniqueId = (uint)((avatarId * 100) + 1);
                     battleInfo.Gaekhpnnppoes.Add(new Flmdpdcelio
                     {
-                        Pfikmpgfecj = (uint)((avatarId * 100) + 1), // Technique ID based on avatarId
+                        Pfikmpgfecj = techniqueId, // obvious
                         Fopfhgjhebm = 1,  // tech id lvl
-                        Ehljdlekgjp = (uint)i, // Owner index from 0 to 3
-                        Ljpcidgmdlc = 1, // Wave flag
-                        Ckbldngkkncs = new uint[] { 0, 1, 2, 3, 4 }, // Target index
+                        Ehljdlekgjp = (uint)i, // Owner index, from 0 to 3 cause avatar slot
+                        Ljpcidgmdlc = 4294967295, // Wave flag
+                        Ckbldngkkncs = new uint[] {/*0, 1, 2, 3*/}, // Target index, was told its the same as owner index
                     });
-
                     // Dynamic values
                     battleInfo.Gaekhpnnppoes[0].Pomhfojgchns.Add("SkillIndex", 0.0f);
                 }

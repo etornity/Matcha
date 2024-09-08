@@ -39,5 +39,28 @@
 
             session.Send(CmdType.CmdGetAvatarDataScRsp, response);
         }
+
+        [Handler(CmdType.CmdGetMultiPathAvatarInfoCsReq)]
+        public static void OnGetMultiPathAvatarInfoCsReq(NetSession session, int cmdId, object data)
+        {
+            var pathMap = new Dictionary<uint, Mjiecoljkip>
+            {
+                { 1001, Mjiecoljkip.Mar7thRogueType },
+                { 8001, Mjiecoljkip.BoyShamanType },
+                { 8002, Mjiecoljkip.GirlShamanType }
+            };
+
+            var response = new Lgolgjbcmpl
+            {
+                Nfhbjlibabk = 0,
+            };
+
+            foreach (var entry in pathMap)
+            {
+                response.Dicpnabknmhs.Add(entry.Key, entry.Value);
+            }
+
+            session.Send(CmdType.CmdGetMultiPathAvatarInfoScRsp, response);
+        }
     }
 }
