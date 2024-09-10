@@ -14,8 +14,8 @@
         public static List<Giclniikjng> AvatarSpList = new List<Giclniikjng>
         {
             new Giclniikjng { Dheffcdjldb = 10000, Nmnbhaopedn = 10000 }, // Avatar1's energy
-            new Giclniikjng { Dheffcdjldb = 10000, Nmnbhaopedn = 10000 }, // and so on..
-            new Giclniikjng { Dheffcdjldb = 10000, Nmnbhaopedn = 10000 }, // ...
+            new Giclniikjng { Dheffcdjldb = 2000, Nmnbhaopedn = 10000 }, // and so on..
+            new Giclniikjng { Dheffcdjldb = 8000, Nmnbhaopedn = 10000 }, // ...
             new Giclniikjng { Dheffcdjldb = 10000, Nmnbhaopedn = 10000 }, // ....
         };
 
@@ -70,7 +70,8 @@
 
             var characters = new uint[] { Avatar1, Avatar2, Avatar3, Avatar4 };
 
-            for (int i = 0; i < characters.Length; i++)
+            // I have no idea why MC doesn't get added if i is set to 0
+            for (int i = 1; i < characters.Length; i++) 
             {
                 response.Kbognlnlcles[0].Ddnmlnmelons.Add(new Lekfnlnebbj
                 {

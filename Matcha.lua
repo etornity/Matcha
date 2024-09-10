@@ -1,0 +1,2 @@
+CS.UnityEngine.GameObject.Find("VersionText"):GetComponentInChildren(typeof(CS.RPG.Client.LocalizedText)).text = ""
+CS.UnityEngine.GameObject.Find("UIRoot/AboveDialog/BetaHintDialog(Clone)"):GetComponentInChildren(typeof(CS.RPG.Client.LocalizedText)).text = "https://github.com/etornity/Matcha"

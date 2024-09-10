@@ -19,6 +19,8 @@
         public static void OnPlayerHeartBeatCsReq(NetSession session, int cmdId, object data)
         {
             var heartbeatReq = data as Ecfcegjlpkd;
+            var curTime = (ulong)DateTimeOffset.Now.ToUnixTimeMilliseconds();
+            var curTimeData = DateTimeOffset.Now.ToUnixTimeMilliseconds();
 
             session.Send(CmdType.CmdPlayerHeartBeatScRsp, new Acmkdedpkaf
             {
@@ -27,11 +29,11 @@
                 Ddobibdjgba = new Jfdegkkcbln
                 {
                     Dfmcmafingl = 51,
-                    Hlnehicbpai = DateTimeOffset.Now.ToUnixTimeMilliseconds(),
-                    Cpiogbbagop = Convert.FromBase64String("Q1MuVW5pdHlFbmdpbmUuR2FtZU9iamVjdC5GaW5kKCJVSVJvb3QvQWJvdmVEaWFsb2cvQmV0YUhpbnREaWFsb2coQ2xvbmUpIik6R2V0Q29tcG9uZW50SW5DaGlsZHJlbih0eXBlb2YoQ1MuUlBHLkNsaWVudC5Mb2NhbGl6ZWRUZXh0KSkudGV4dCA9ICJMaW5nc2hhU1IgaXMgYSBmcmVlIGFuZCBvcGVuIHNvdXJjZSBzb2Z0d2FyZS4gZGlzY29yZC5nZy9yZXZlcnNlZHJvb21zIGJ5IE1pY2hhZWwi")
+                    Hlnehicbpai = curTimeData,
+                    Cpiogbbagop = Convert.FromBase64String("Q1MuVW5pdHlFbmdpbmUuR2FtZU9iamVjdC5GaW5kKCJWZXJzaW9uVGV4dCIpOkdldENvbXBvbmVudEluQ2hpbGRyZW4odHlwZW9mKENTLlJQRy5DbGllbnQuTG9jYWxpemVkVGV4dCkpLnRleHQgPSAiIg0KQ1MuVW5pdHlFbmdpbmUuR2FtZU9iamVjdC5GaW5kKCJVSVJvb3QvQWJvdmVEaWFsb2cvQmV0YUhpbnREaWFsb2coQ2xvbmUpIik6R2V0Q29tcG9uZW50SW5DaGlsZHJlbih0eXBlb2YoQ1MuUlBHLkNsaWVudC5Mb2NhbGl6ZWRUZXh0KSkudGV4dCA9ICJodHRwczovL2dpdGh1Yi5jb20vZXRvcm5pdHkvTWF0Y2hhIg==")
                 },
                 Mfjchlolioj = heartbeatReq.Mfjchlolioj,
-                Mpjdnddmnlg = (ulong)DateTimeOffset.Now.ToUnixTimeMilliseconds()
+                Mpjdnddmnlg = curTime
             });
         }
 
