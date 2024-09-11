@@ -56,7 +56,6 @@
                 Nfhbjlibabk = 0,
             };
 
-            // Still broken...
             foreach (var entry in pathMap)
             {
                 response.Dicpnabknmhs[entry.Key] = entry.Value;

@@ -39,10 +39,10 @@ namespace Matcha.Gateserver.Manager.Handlers
             };
 
             List<uint> SkillIdEnds = new List<uint> { 1, 2, 3, 4, 7, 101, 102, 103, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210 };
-            List<uint> teamMembers = GetTeamMembers();
+            var teamMembers = GetTeamMembers();
 
             // loop through team members
-            for (int i = 0; i < teamMembers.Count; i++)
+            for (int i = 0; i < teamMembers.Length; i++)
             {
                 uint avatarId = teamMembers[i];
 
@@ -146,7 +146,7 @@ namespace Matcha.Gateserver.Manager.Handlers
                         Ckbldngkkncs = new uint[] {/*0, 1, 2, 3*/}, // Target index, was told its the same as owner index
                     });
                     // Dynamic values
-                    battleInfo.Gaekhpnnppoes[0].Pomhfojgchns.Add("SkillIndex", 0.0f);
+                    battleInfo.Gaekhpnnppoes[0].Pomhfojgchns["SkillIndex"] = 0.0f;
                 }
             }
 
@@ -199,17 +199,17 @@ namespace Matcha.Gateserver.Manager.Handlers
             });
         }
 
-        private static List<uint> GetTeamMembers()
+        private static uint[] GetTeamMembers()
         {
-            List<uint> teamMembers = new List<uint>
-            { 
-                LineupReqGroup.Avatar1, 
-                LineupReqGroup.Avatar2, 
-                LineupReqGroup.Avatar3, 
+            var teamMembers = new uint[]
+            {
+                LineupReqGroup.Avatar1,
+                LineupReqGroup.Avatar2,
+                LineupReqGroup.Avatar3,
                 LineupReqGroup.Avatar4,
             };
 
-            teamMembers = teamMembers.Where(avatarId => avatarId != 0).ToList();
+            teamMembers = teamMembers.Where(avatarId => avatarId != 0).ToArray();
             return teamMembers;
         }
     }

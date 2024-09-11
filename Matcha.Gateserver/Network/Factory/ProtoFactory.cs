@@ -15,7 +15,9 @@
             {
                 {CmdType.CmdPlayerGetTokenCsReq, typeof(Hphmmnaenpm)},
                 {CmdType.CmdPlayerLoginCsReq, typeof(Aojnbenkgjd)},
+
                 {CmdType.CmdGetAvatarDataCsReq, typeof(Fbblgdmmacj)},
+                {CmdType.CmdGetMultiPathAvatarInfoCsReq, typeof(Fjkpeabkggl)},
 
                 {CmdType.CmdGetAllLineupDataCsReq, typeof(Jablakijdea)},
                 {CmdType.CmdGetCurLineupDataCsReq, typeof(Mfochmockmo)},
